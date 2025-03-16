@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Play Music</title>
+</head>
+
+<body>
+    <audio id="music" src="hello.mp3" autoplay></audio>
+</body>
+
+</html>
+
+<style>
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var music = document.getElementById('music');
+        music.volume = 1; // Set volume to 100%
+        music.play().catch(error => console.log("Autoplay blocked by browser: " + error));
+    });
+</script>
